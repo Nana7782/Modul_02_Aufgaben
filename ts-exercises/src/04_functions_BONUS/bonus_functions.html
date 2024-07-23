@@ -3,9 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>BONUS functions - Project-TS-Spielstandsanzeige</title>
   </head>
   <body>
+    <section class="scorekeeper">
+      <div class="home">
+        <div class="home-frame">
+          <div class="home-anzeige">
+            <p class="home-score"></p>
+          </div>
+          <p>Home</p>
+        </div>
+        <button id="home-score_1">+1</button>
+        <button id="home-score_2">+2</button>
+        <button id="home-score_3">+3</button>
+      </div>
+
+      <div class="away">
+        <div class="away-frame">
+          <div class="away-anzeige">
+            <p class="away-score"></p>
+          </div>
+          <p>Away</p>
+        </div>
+        <button id="away-score_1">+1</button>
+        <button id="away-score_2">+2</button>
+        <button id="away-score_3">+3</button>
+      </div>
+    </section>
+    <button id="reset">Reset</button>
     <script type="module" src="./bonus_functions.ts"></script>
   </body>
 </html>
