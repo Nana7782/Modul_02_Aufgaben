@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "Orbitron";
+  src: url(../fonts/Orbitron-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url(../fonts/Lato-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2c2c2c;
+}
+
+.score-container {
+  display: flex;
+  width: 80%;
+  margin: 20px auto;
+}
+.home {
+  margin-right: 150px;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  margin: 0 20px;
+}
+legend {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  padding: 0 5px;
+  background-color: #2c2c2c;
+  font-family: "Orbitron";
+  font-size: 20px;
+  color: #fff;
+}
+.home fieldset {
+  border: 4.45px solid #97f5bb;
+}
+.away fieldset {
+  border: 4.45px solid #525df4;
+}
+
+p {
+  font-family: "Orbitron";
+  font-size: 100px;
+  color: #fdf860;
+  background-color: #000;
+  padding: 20px 30px;
+  border-radius: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.buttons button {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  margin: 5px;
+  font-family: "Lato";
+  font-size: 20px;
+  color: #fff;
+  border: none;
+}
+
+.home .buttons button {
+  background-color: #97f5bb;
+}
+
+.away .buttons button {
+  background-color: #525df4;
+}
+
+.reset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#reset {
+  width: 100px;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+}

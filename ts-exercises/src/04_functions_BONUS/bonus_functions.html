@@ -3,36 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>BONUS functions - Project-TS-Spielstandsanzeige</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Basketball Score</title>
   </head>
   <body>
-    <section class="scorekeeper">
+    <div class="score-container">
       <div class="home">
-        <div class="home-frame">
-          <div class="home-anzeige">
-            <p class="home-score"></p>
-          </div>
-          <p>Home</p>
+        <fieldset>
+          <legend>Home</legend>
+          <p id="homeScore">0</p>
+        </fieldset>
+        <div class="buttons">
+          <button id="homeAdd1">+1</button>
+          <button id="homeAdd2">+2</button>
+          <button id="homeAdd3">+3</button>
         </div>
-        <button id="home-score_1">+1</button>
-        <button id="home-score_2">+2</button>
-        <button id="home-score_3">+3</button>
       </div>
 
       <div class="away">
-        <div class="away-frame">
-          <div class="away-anzeige">
-            <p class="away-score"></p>
-          </div>
-          <p>Away</p>
+        <fieldset>
+          <legend>Away</legend>
+          <p id="awayScore">0</p>
+        </fieldset>
+        <div class="buttons">
+          <button id="awayAdd1">+1</button>
+          <button id="awayAdd2">+2</button>
+          <button id="awayAdd3">+3</button>
         </div>
-        <button id="away-score_1">+1</button>
-        <button id="away-score_2">+2</button>
-        <button id="away-score_3">+3</button>
       </div>
-    </section>
-    <button id="reset">Reset</button>
+    </div>
+    <div class="reset">
+      <button id="reset">Reset</button>
+    </div>
+    <a href="../../index.html">Back home</a>
     <script type="module" src="./bonus_functions.ts"></script>
   </body>
 </html>
