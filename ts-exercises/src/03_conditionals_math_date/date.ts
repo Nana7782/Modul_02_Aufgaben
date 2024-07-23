@@ -14,4 +14,7 @@ document.getElementById("dateOutput")!.innerHTML = output;
 
 // #  Date-TS-Level2_1
 
-const currentDate: Date = new Date();
+const currentDate = new Date();
+const date: number = currentDate.getDate();
+const month: number = currentDate.getMonth();
+const year: number = currentDate.getFullYear();
