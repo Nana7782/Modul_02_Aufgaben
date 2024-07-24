@@ -35,6 +35,7 @@ addItem("Fitness", true);
 addItem("Grocery shopping", true);
 addItem("File tax refund", true);
 addItem("Take a nap", true);
+addItem("Mop floors", false);
 
 console.log("To-Do-List after adding items:");
 printList();
