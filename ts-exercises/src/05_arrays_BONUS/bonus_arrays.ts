@@ -2,7 +2,7 @@
 
 let toDoItems: string[] = [];
 
-function addItem(toDoItem: string, atTheBack: boolean) {
+function addItem(toDoItem: string, atTheBack: boolean): void {
   if (atTheBack) {
     toDoItems.push(toDoItem);
   } else {
@@ -10,7 +10,7 @@ function addItem(toDoItem: string, atTheBack: boolean) {
   }
 }
 
-function removeItem(atTheBack: boolean) {
+function removeItem(atTheBack: boolean): void {
   if (atTheBack) {
     toDoItems.pop();
   } else {
@@ -18,15 +18,15 @@ function removeItem(atTheBack: boolean) {
   }
 }
 
-function addItemAt(toDoItem: string, index: number) {
+function addItemAt(toDoItem: string, index: number): void {
   toDoItems.splice(index, 0, toDoItem);
 }
 
-function removeItemAt(indexToRemove: number) {
+function removeItemAt(indexToRemove: number): void {
   toDoItems.splice(indexToRemove, 1);
 }
 
-function printList() {
+function printList(): void {
   console.log(toDoItems);
 }
 
@@ -61,11 +61,32 @@ function printPretty() {
 printPretty();
 
 // ---------------------------------------------------
+// - Bonus Bonus function - added during recap
 
-// function askForUserInput(){
-//     const input = window.prompt("Please add 5 to-do's separated by , :");
+function askForUserInput(): void {
+  let userInput = window.prompt("Please add 5 to-do's separated by , :");
 
-//     if (input) {
-//         const items = input
-//     }
-// }
+  if (userInput) {
+    const itemsArray: string[] = userInput.split(",");
+    if (itemsArray.length === 5) {
+      toDoItems.push(itemsArray[0].trim());
+      toDoItems.push(itemsArray[1].trim());
+      toDoItems.push(itemsArray[2].trim());
+      toDoItems.push(itemsArray[4].trim());
+      toDoItems.push(itemsArray[4].trim());
+      console.log(toDoItems);
+    } else {
+      window.confirm("Please add exactly 5 to-do's");
+      window.location.reload();
+    }
+  } else {
+    window.confirm("You didn't add any/enough to-do's!");
+    window.location.reload();
+  }
+}
+
+askForUserInput();
+
+// window.prompt and window.alert are old - but usefull at the moment, as we don't know how to do it better :)
+
+// added window confirm and window reload by searching google
