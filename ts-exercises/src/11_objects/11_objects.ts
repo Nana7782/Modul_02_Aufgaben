@@ -233,10 +233,10 @@ singers.sort((nameA, nameB) => {
 
 console.log(singers);
 
-singers.sort((startA, startB) => {
+let singers2 = [...singers];
+
+singers2.sort((startA, startB) => {
   return startA.period_active.start - startB.period_active.start;
 });
 
-console.log(singers);
-
-// ? Das zweite sort überschreibt das Ergebnis des ersten!? - Hat aber funktioniert ;)
+console.log(singers2);
