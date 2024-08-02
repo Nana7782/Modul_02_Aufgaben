@@ -3,18 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Singer Search</title>
   </head>
 
   <body>
     <a href="../../index.html">Back home</a>
     <h1>Singers</h1>
-    <div>
+    <div id="search-container">
       <input id="searchInput" type="text" placeholder="Search by Name" />
       <button id="search-button">Search</button>
     </div>
-    <div id="table-container"></div>
-
+    <div id="table-container">
+      <table id="singersTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Country</th>
+            <th>Period Active</th>
+            <th>Genre</th>
+          </tr>
+        </thead>
+        <tbody id="singersTableBody"></tbody>
+      </table>
+    </div>
     <script type="module" src="./objects_bonus.ts"></script>
   </body>
 </html>

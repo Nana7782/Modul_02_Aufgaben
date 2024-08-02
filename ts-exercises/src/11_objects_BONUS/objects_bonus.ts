@@ -61,3 +61,51 @@ const singersTwo: SingerTwo[] = [
     genre: "Progressive rock / Psychedelic rock",
   },
 ];
+
+const searchButton = document.getElementById(
+  "search-button"
+) as HTMLButtonElement;
+const searchInput = document.getElementById("searchInput") as HTMLInputElement;
+const singersTableBody = document.getElementById(
+  "singersTableBody"
+) as HTMLTableSectionElement;
+
+function displaySingers(singers: SingerTwo[]): void {
+  singersTableBody.textContent = "";
+
+  singers.forEach((singer) => {
+    const row = document.createElement("tr");
+
+    const nameCell = document.createElement("td");
+    nameCell.textContent = singer.name;
+
+    const countryCell = document.createElement("td");
+    countryCell.textContent = singer.country;
+
+    const periodCell = document.createElement("td");
+    periodCell.textContent = `${singer.period_active.start} - ${singer.period_active.end}`;
+
+    const genreCell = document.createElement("td");
+    genreCell.textContent = singer.genre;
+
+    row.appendChild(nameCell);
+    row.appendChild(countryCell);
+    row.appendChild(periodCell);
+    row.appendChild(genreCell);
+
+    singersTableBody.appendChild(row);
+  });
+}
+
+function searchSingers(): void {
+  const searchTerm = searchInput.value.toLowerCase();
+  const filteredSingers = singersTwo.filter(
+    (singer) =>
+      singer.name.toLowerCase().includes(searchTerm) ||
+      singer.country.toLowerCase().includes(searchTerm) ||
+      singer.genre.toLowerCase().includes(searchTerm)
+  );
+  displaySingers(filteredSingers);
+}
+searchButton.addEventListener("click", searchSingers);
+displaySingers(singersTwo);
