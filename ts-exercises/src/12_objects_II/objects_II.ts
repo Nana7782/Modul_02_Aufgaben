@@ -279,3 +279,12 @@ console.log(favoriteBands.get("Kraftwerk"[3]));
 
 const NewModelArmyArray: any = favoriteBands.get("New Model Army");
 console.log(NewModelArmyArray[4]);
+
+// ------ oder -----
+
+const lieder = favoriteBands.get("Kraftwerk");
+if (lieder) {
+  console.log(lieder[3]);
+} else {
+  console.error("Die Band 'Kraftwerk' wurde nicht gefunden.");
+}
