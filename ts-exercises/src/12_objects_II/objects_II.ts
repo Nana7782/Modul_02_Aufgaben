@@ -163,6 +163,15 @@ enum ClothingColor {
   Gray = "#808080",
 }
 
+const colorNames: { [key in ClothingColor]: string } = {
+  [ClothingColor.Yellow]: "Yellow",
+  [ClothingColor.Orange]: "Orange",
+  [ClothingColor.Pink]: "Pink",
+  [ClothingColor.Blue]: "Blue",
+  [ClothingColor.Purple]: "Purple",
+  [ClothingColor.Gray]: "Gray",
+};
+
 const allColors: ClothingColor[] = [
   ClothingColor.Yellow,
   ClothingColor.Orange,
@@ -178,14 +187,14 @@ function createColorButtons() {
   allColors.forEach((color) => {
     const button = document.createElement("button");
     button.style.backgroundColor = color;
-    button.innerText = color;
+    button.innerText = colorNames[color];
     container.appendChild(button);
   });
   document.body.appendChild(container);
 }
 createColorButtons();
 
-// ? funktioniert nicht ganz so wie ich will
+// ! Noch eine Variable für die Farbnamen erstellt, so dass der Button Text der Name der Farbe ist, anstatt des Hexwerts
 
 // ##### Set-TS-Level-1_1
 console.log("%c Set-Level-1_1 ", "background: white; color: green");
@@ -281,7 +290,6 @@ const NewModelArmyArray: any = favoriteBands.get("New Model Army");
 console.log(NewModelArmyArray[4]);
 
 // ------ oder -----
-
 const lieder = favoriteBands.get("Kraftwerk");
 if (lieder) {
   console.log(lieder[3]);
