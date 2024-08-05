@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Trinkgeldrechner</title>
+  </head>
+  <body>
+    <a href="../../index.html">Back home</a>
+
+    <div id="rechner">
+      <h1>Trinkgeldrechner</h1>
+      <label for="betrag">Wie hoch war die Rechnung?</label>
+      <input type="number" name="betrag" id="betrag" />
+      <label for="teilnehmer"
+        >Wie viele Menschen teilen sich die Rechnung?</label
+      >
+      <input type="number" name="teilnehmer" id="teilnehmer" />
+      <select name="service" id="service">
+        <option value="0.02">Schlechter Service (2%)</option>
+        <option value="0.10">Guter Service (10%)</option>
+        <option value="0.20">Super Service (20%)</option>
+      </select>
+      <input type="submit" value="Berechne" id="berechne" />
+
+      <p id="trinkgeld">Trinkgeld: 0 €</p>
+      <p id="gesamtbetrag">Gesamtbetrag: 0 €</p>
+      <p id="teilBetrag">Anteil pro Teilnehmer: 0 €</p>
+      <a
+        href="https://www.figma.com/board/xl2YE5VK96ccqTT0PzTrxN/Trinkgeldrechner-Flowchart?node-id=0-1&t=wki0GdSspQ5TOyRW-1"
+        >FLOWCHART</a
+      >
+    </div>
+
+    <script type="module" src="./trinkgeldrechner.ts"></script>
+  </body>
+</html>

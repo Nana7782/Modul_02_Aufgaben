@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#rechner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(139, 194, 194);
+  width: 50%;
+  border-radius: 5%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+input {
+  width: 60%;
+  margin: 5px 0;
+}
+
+p {
+  margin: 3px 0;
+}
+
+#rechner a {
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+  color: grey;
+  margin-top: 25px;
+  cursor: pointer;
+}
