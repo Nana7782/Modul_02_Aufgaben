@@ -1,9 +1,18 @@
+import { StarWarsActor, MitarbeiterVerwaltung } from "../00_models/types";
+import {
+  Weekday,
+  Month,
+  PizzaSize,
+  PizzaIngredients,
+  HtmlError,
+  ClothingColor,
+} from "../00_models/enums";
+
 // **** enum, set, map tuple *****
 
 // ##### Tuple-TS-Level-1_1
 console.log("%c Tuple-Level-1_1 ", "background: white; color: green");
 
-type StarWarsActor = [string, string];
 const starWarsActor: StarWarsActor = ["Luke Skywalker", "Mark Hamill"];
 
 const starWarsActors: StarWarsActor[] = [
@@ -21,13 +30,6 @@ for (const [character, actor] of starWarsActors) {
 // ##### Tuple-TS-Level-2_1
 console.log("%c Tuple-Level-2_1 ", "background: white; color: green");
 
-type MitarbeiterVerwaltung = [
-  nummer: number,
-  name: string,
-  abteilung: string,
-  jahresgehalt: number
-];
-
 const mitarbeiter: MitarbeiterVerwaltung[] = [
   [1437, "Sahra Desert", "HR", 45370],
   [1439, "Sam Simonis", "Einkauf", 38572],
@@ -41,53 +43,13 @@ console.log(mitarbeiter);
 // ##### Enum-TS-Level-1_1
 console.log("%c Enum-Level-1_1 ", "background: white; color: green");
 
-enum Weekday {
-  Monday = "Monday",
-  Tuesday = "Tuesday",
-  Wednesday = "Wednesday",
-  Thursday = "Thursday",
-  Friday = "Friday",
-  Saturday = "Saturday",
-  Sunday = "Sunday",
-}
 console.log(Weekday);
-
-enum Month {
-  January = "January",
-  February = "February",
-  March = "March",
-  April = "April",
-  May = "May",
-  June = "June",
-  July = "July",
-  August = "August",
-  September = "September",
-  October = "October",
-  November = "November",
-  December = "December",
-}
-
 console.log(Month);
 
 // ? for in Schleife hab ich nicht hinbekommen
 
 // ##### Enum-TS-Level-1_2
 console.log("%c Enum-Level-1_2 ", "background: white; color: green");
-
-enum PizzaSize {
-  Small,
-  Medium,
-  Large,
-  Familie,
-}
-
-enum PizzaIngredients {
-  Cheese,
-  Onion,
-  Salami,
-  Spinach,
-  Jalapenos,
-}
 
 type Pizza = { size: PizzaSize; ingredients: PizzaIngredients };
 
@@ -113,13 +75,6 @@ const pizza4: Pizza = {
 
 // ##### Enum-TS-Level-2_1
 console.log("%c Enum-Level-2_1 ", "background: white; color: green");
-
-enum HtmlError {
-  OK = 200,
-  Redirect = 300,
-  BadRequest = 400,
-  InternalServerError = 500,
-}
 
 function showHTMLError() {
   const randomValue = Math.floor(Math.random() * 6);
@@ -153,15 +108,6 @@ showHTMLError();
 
 // ##### Enum-TS-Level-2_2
 console.log("%c Enum-Level-2_2 ", "background: white; color: green");
-
-enum ClothingColor {
-  Yellow = "#FFFF00",
-  Orange = "#FFA500",
-  Pink = "#FFC0CB",
-  Blue = "#0000FF",
-  Purple = "#800080",
-  Gray = "#808080",
-}
 
 const colorNames: { [key in ClothingColor]: string } = {
   [ClothingColor.Yellow]: "Yellow",

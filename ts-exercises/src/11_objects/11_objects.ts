@@ -1,11 +1,7 @@
+import { Apple, Pet, Musik, Lager, Singer } from "../00_models/types";
+
 // ##### Objekte-TS-Level-1_3
 console.log("%c Objekte-Level-1_3 ", "background: white; color: green");
-
-type Apple = {
-  color: string;
-  size: string;
-  isSweet: boolean;
-};
 
 let redApple: Apple = { color: "red", size: "big", isSweet: true };
 let greenApple: Apple = { color: "green", size: "small", isSweet: false };
@@ -28,11 +24,6 @@ console.log(apples);
 
 // ##### Objekte-TS-Level-1_4
 console.log("%c Objekte-Level-1_4 ", "background: white; color: green");
-
-type Pet = {
-  tiertyp: string;
-  namen: string[];
-};
 
 let unsereHaustiere: Pet[] = [
   {
@@ -68,19 +59,6 @@ console.log(unsereHaustiere);
 // ##### Objekte-TS-Level-1_5
 console.log("%c Objekte-Level-1_5 ", "background: white; color: green");
 
-type Lager = {
-  schreibtisch: {
-    schublade: string;
-  };
-  schrank: {
-    "Obere Schublade": {
-      Ordner1: string;
-      Ordner2: string;
-    };
-    "Untere Schublade": string;
-  };
-};
-
 let unserLager: Lager = {
   schreibtisch: {
     schublade: "Hefter",
@@ -100,14 +78,6 @@ console.log(unserLager.schreibtisch.schublade);
 
 // ##### Objekte-TS-Level-1_6
 console.log("%c Objekte-Level-1_6 ", "background: white; color: green");
-
-type Musik = {
-  kunstler: string;
-  title: string;
-  release_jahr: number;
-  formate: string[];
-  gold: boolean;
-};
 
 let meineTopVier: Musik[] = [
   {
@@ -162,19 +132,6 @@ console.log(meineTopVier);
 
 // ##### Objekte-TS-Level-2_2
 console.log("%c Objekte-Level-2_2 ", "background: white; color: green");
-
-type PeriodActive = {
-  start: number;
-  end: number | string;
-  extra?: number;
-};
-
-type Singer = {
-  name: string;
-  country: string;
-  period_active: PeriodActive;
-  genre: string;
-};
 
 const singers: Singer[] = [
   {

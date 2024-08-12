@@ -1,11 +1,7 @@
+import { SimplePerson } from "../../00_models/types";
+
 // ##### Dom-Elements-TS-Level-2_2
 console.log("%c Dom-Elements-TS-Level-2_2 ", "background: white; color: green");
-
-type SimplePerson = {
-  vorname: string;
-  nachname: string;
-  land: string;
-};
 
 const submitForm = document.getElementById("form1") as HTMLFormElement;
 submitForm?.addEventListener("submit", (event: Event) => {

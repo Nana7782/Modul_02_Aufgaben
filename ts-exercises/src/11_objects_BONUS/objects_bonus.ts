@@ -1,15 +1,4 @@
-type PeriodActiveTwo = {
-  start: number;
-  end: number | string;
-  extra?: number;
-};
-
-type SingerTwo = {
-  name: string;
-  country: string;
-  period_active: PeriodActiveTwo;
-  genre: string;
-};
+import { PeriodActiveTwo, SingerTwo } from "../00_models/types";
 
 const singersTwo: SingerTwo[] = [
   {

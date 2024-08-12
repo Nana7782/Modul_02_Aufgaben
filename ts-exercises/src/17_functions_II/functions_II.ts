@@ -1,3 +1,5 @@
+import { NewCustomer, ObjectWithFN, Monster } from "../00_models/types";
+
 // ##### Functions-TS-Grundlagen-Level-1_1
 console.log(
   "%c Functions-TS-Grundlagen-Level-1_1 ",
@@ -51,13 +53,6 @@ let ergebnis2 = multiply(zahl1, zahl2);
 
 // - 4
 
-type ObjectWithFN = {
-  name: string;
-  nachname: string;
-  alter: number;
-  showInfo: () => void;
-};
-
 const einObjec = {
   name: "Linda",
   nachname: "de Mol",
@@ -103,14 +98,6 @@ console.log(person2.zeigeProfil());
 // ##### Functions-TS-Level-1_6
 console.log("%c Functions-TS-Level-1_6 ", "background: white; color: green");
 
-type Monster = {
-  name: string;
-  type: string;
-  health: number;
-  strength: number;
-  speed: number;
-};
-
 function createMonster(
   name: string,
   type: string,
@@ -139,13 +126,6 @@ console.log(monster4);
 
 // ##### Functions-TS-Level-2_2
 console.log("%c Functions-TS-Level-2_2 ", "background: white; color: green");
-
-type NewCustomer = {
-  firstName: string;
-  lastName: string;
-  email?: string;
-  phone?: string;
-};
 
 function greetNewUser1(customer: NewCustomer): string {
   const { firstName, lastName, email, phone } = customer;
