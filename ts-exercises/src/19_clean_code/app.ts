@@ -220,5 +220,5 @@ console.log("%c Clean-Code-TS-Level-3_1 ", "background: white; color: green");
 // * ganz schön viele Kommentare!
 // * let n = todo ? - was soll denn das sein? genauso wie let array:string[]=[]
 // * processTasks erschließt sich mir nicht - wird aufgerufen, aber ist eigentlich keine Funktion
-// * resultOutside ist auf irgendwie überflüssig!?
+// * resultOutside ist auch irgendwie überflüssig!?
 // * auskommentierter Code (im Original, ich hab ja den ganzen Code auskommentiert) hat da eigentlich nichts drin zu suchen
