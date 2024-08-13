@@ -216,8 +216,9 @@ console.log("%c Clean-Code-TS-Level-3_1 ", "background: white; color: green");
 // ! Ich kann den Code auf Anhieb nicht korrigieren, aber was ich sehe, was falsch ist:
 // * die Lesbarkeint und Nachvollziehbarkeit ist schwierig => Aufgaben / Abfragen mit  quasi identischem Code
 // * DRY wird also nicht befolgt, da einiges mehrfach wiederholt wird
-// * Variablennamen z.T. nicht aussagekräftig (io3, inpObj2) ?????
+// * Variablennamen z.T. nicht aussagekräftig (io3, inpObj2, ret etc.pp) ?????
 // * ganz schön viele Kommentare!
 // * let n = todo ? - was soll denn das sein? genauso wie let array:string[]=[]
-// * resultOutside erschließt sich mir nicht - wird aufgerufen, aber ist eigentlich keine Funktion
+// * processTasks erschließt sich mir nicht - wird aufgerufen, aber ist eigentlich keine Funktion
+// * resultOutside ist auf irgendwie überflüssig!?
 // * auskommentierter Code (im Original, ich hab ja den ganzen Code auskommentiert) hat da eigentlich nichts drin zu suchen
