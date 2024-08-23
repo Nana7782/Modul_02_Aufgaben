@@ -8,6 +8,28 @@ class Singer {
   sing(): string {
     return "";
   }
+  letsSing(): string {
+    let emoji: string;
+
+    switch (this.constructor) {
+      case FreddieMercury:
+        emoji = "👨🏻‍🦱";
+        break;
+      case MarilynManson:
+        emoji = "👨🏻‍🎤";
+        break;
+      case JoanJett:
+        emoji = "👱🏻‍♀️";
+        break;
+      case JohnyCash:
+        emoji = "👨🏽‍🌾";
+        break;
+      default:
+        return "Unknown Singer";
+    }
+
+    return `${emoji} "${this.name}" sings "${this.sing()}"`;
+  }
 }
 
 class FreddieMercury extends Singer {

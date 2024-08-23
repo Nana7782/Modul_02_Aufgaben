@@ -54,37 +54,49 @@ run.coolDown();
 // ##### OOP-Class-TS-Level-2_6
 console.log("%c OOP-Class-TS-Level-2_6 ", "background: white; color: green");
 
-function letsSing(singer: Singer): string {
-  let emoji: string;
+// function letsSing(singer: Singer): string {
+//   let emoji: string;
 
-  switch (singer.constructor) {
-    case FreddieMercury:
-      emoji = "👨🏻‍🦱";
-      break;
-    case MarilynManson:
-      emoji = "👨🏻‍🎤";
-      break;
-    case JoanJett:
-      emoji = "👱🏻‍♀️";
-      break;
-    case JohnyCash:
-      emoji = "👨🏽‍🌾";
-      break;
-    default:
-      return "Unknown Singer";
-  }
+//   switch (singer.constructor) {
+//     case FreddieMercury:
+//       emoji = "👨🏻‍🦱";
+//       break;
+//     case MarilynManson:
+//       emoji = "👨🏻‍🎤";
+//       break;
+//     case JoanJett:
+//       emoji = "👱🏻‍♀️";
+//       break;
+//     case JohnyCash:
+//       emoji = "👨🏽‍🌾";
+//       break;
+//     default:
+//       return "Unknown Singer";
+//   }
 
-  return `${emoji} "${singer.name}" sings "${singer.sing()}"`;
-}
+//   return `${emoji} "${singer.name}" sings "${singer.sing()}"`;
+// }
+
+// const freddy = new FreddieMercury("Freddie Mercury");
+// console.log(letsSing(freddy));
+
+// const marilyn = new MarilynManson("Marilyn Manson");
+// console.log(letsSing(marilyn));
+
+// const joan = new JoanJett("Joan Jett");
+// console.log(letsSing(joan));
+
+// const johny = new JohnyCash("Johnny Cash");
+// console.log(letsSing(johny));
 
 const freddy = new FreddieMercury("Freddie Mercury");
-console.log(letsSing(freddy));
+console.log(freddy.letsSing());
 
 const marilyn = new MarilynManson("Marilyn Manson");
-console.log(letsSing(marilyn));
+console.log(marilyn.letsSing());
 
 const joan = new JoanJett("Joan Jett");
-console.log(letsSing(joan));
+console.log(joan.letsSing());
 
 const johny = new JohnyCash("Johnny Cash");
-console.log(letsSing(johny));
+console.log(johny.letsSing());
