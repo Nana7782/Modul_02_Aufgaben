@@ -76,3 +76,37 @@ const paragraph = document.getElementById(
 ) as HTMLParagraphElement;
 
 runHomework();
+
+// ##### callback-TS-Level-2_2
+console.log("%c callback-TS-Level-2_2 ", "background: white; color: green");
+
+function processData(
+  numbers: number[],
+  sortCallback: (numbers: number[]) => number[],
+  transformCallback: (number: number) => number
+): Map<number, string> {
+  const sortedNumbers = sortCallback(numbers);
+  const transformedNumbers = sortedNumbers.map(transformCallback);
+  const result = new Map<number, string>();
+  transformedNumbers.forEach((number) =>
+    result.set(number, number.toString(16))
+  );
+  return result;
+}
+
+function sortDescending(numbers: number[]): number[] {
+  return numbers.sort((a, b) => b - a);
+}
+
+function doubleNumber(number: number): number {
+  return number * 2;
+}
+
+const array1 = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5];
+const array2 = [100, 50, 25, 75, 125];
+
+const result1 = processData(array1, sortDescending, doubleNumber);
+console.log("Ergebnis für Array 1:", result1);
+
+const result2 = processData(array2, sortDescending, doubleNumber);
+console.log("Ergebnis für Array 2:", result2);
