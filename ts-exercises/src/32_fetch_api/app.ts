@@ -100,7 +100,7 @@ fetch(jsonPlaceholderPostsAPI)
         longestBody = post.body;
       }
     });
-    console.log(highestId);
-    console.log(shortestTitle);
-    console.log(longestBody);
+    console.log({ highestId });
+    console.log({ shortestTitle });
+    console.log({ longestBody });
   });
