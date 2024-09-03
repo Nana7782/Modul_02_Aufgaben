@@ -37,16 +37,24 @@ function displayCountries(countries: ICountry[]) {
     const officialName = document.createElement("h4") as HTMLHeadElement;
     officialName.textContent = `Officialy known as: ${country.name.official}`;
 
-    // const nativeName = document.createElement("p") as HTMLParagraphElement;
-    // nativeName.textContent = `Countryname in native language: ${country.name.nativeName}`;
+    const nativeNames = Object.values(country.name.nativeName);
+    const nativeOfficialName = nativeNames.map((name) => name.official);
+
+    const nativeName = document.createElement("p") as HTMLParagraphElement;
+    // nativeNames.forEach((name) => {
+    //   console.log(name.official);
+    // });
+    // console.log(nativeNames);
+
+    nativeName.textContent = `Countryname in native language: ${nativeOfficialName} `;
 
     const flagInfo = document.createElement("p") as HTMLParagraphElement;
-    flagInfo.textContent = `Info about flag: ${country.flags.alt}` || "n/a";
+    flagInfo.textContent = `Info about flag: ${country.flags.alt}` || `n/a`;
 
     countryDiv.appendChild(flagImg);
     countryDiv.appendChild(countryName);
     countryDiv.appendChild(officialName);
-    // countryDiv.appendChild(nativeName);
+    countryDiv.appendChild(nativeName);
     countryDiv.appendChild(flagInfo);
     contentDiv.appendChild(countryDiv);
   });
