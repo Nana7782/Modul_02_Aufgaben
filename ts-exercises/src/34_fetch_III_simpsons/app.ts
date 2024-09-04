@@ -1,7 +1,7 @@
 import IQuotes from "./interfaces/IQuotes";
 import "./assets/css/style.css";
 
-const BASE_URL = "https://thesimpsonsquoteapi.glitch.me/";
+const BASE_URL = "https://thesimpsonsquoteapi.glitch.me";
 const RANDOM_URL = `${BASE_URL}/quotes`;
 // const LISA_URL = `${BASE_URL}/quotes?character=lisa%20simpson`;
 // const BART_URL = `${BASE_URL}/quotes?character=bart%20simpson`;
