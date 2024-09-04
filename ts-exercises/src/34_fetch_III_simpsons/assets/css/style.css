@@ -1,0 +1,124 @@
+body {
+  background-color: #16a085;
+  padding-top: 75px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #fefb1e;
+}
+h1 {
+  text-align: center;
+  padding-bottom: 75px;
+}
+span {
+  margin: 0 auto;
+  padding: 40px;
+}
+#btn-container {
+  text-align: center;
+  margin-bottom: 50px;
+}
+button {
+  background-color: #fefb1e;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px black;
+  margin: 10px;
+}
+#quotes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.quote-item {
+  width: 300px;
+  border: 1px solid #117c67;
+  box-shadow: 5px 5px 5px #117c67;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.quote-item img {
+  max-height: 250px;
+}
+
+.quote {
+  font-size: 20px;
+}
+
+/****** LOADER ******/
+
+.loader {
+  position: relative;
+  width: 108px;
+  display: flex;
+  justify-content: space-between;
+}
+.loader::after,
+.loader::before {
+  content: "";
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background-color: #fff;
+  background-image: radial-gradient(circle 14px, #0d161b 100%, transparent 0);
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  animation: eyeMove 10s infinite, blink 10s infinite;
+}
+@keyframes eyeMove {
+  0%,
+  10% {
+    background-position: 0px 0px;
+  }
+  13%,
+  40% {
+    background-position: -15px 0px;
+  }
+  43%,
+  70% {
+    background-position: 15px 0px;
+  }
+  73%,
+  90% {
+    background-position: 0px 15px;
+  }
+  93%,
+  100% {
+    background-position: 0px 0px;
+  }
+}
+@keyframes blink {
+  0%,
+  10%,
+  12%,
+  20%,
+  22%,
+  40%,
+  42%,
+  60%,
+  62%,
+  70%,
+  72%,
+  90%,
+  92%,
+  98%,
+  100% {
+    height: 48px;
+  }
+  11%,
+  21%,
+  41%,
+  61%,
+  71%,
+  91%,
+  99% {
+    height: 18px;
+  }
+}
