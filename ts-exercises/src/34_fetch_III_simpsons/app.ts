@@ -62,11 +62,3 @@ randomBtn.addEventListener("click", () => {
 homerBtn.addEventListener("click", () => {
   fetchQuotes(HOMER_URL);
 });
-
-// const userInput = searchInput.value;
-
-// searchInput.addEventListener("input", () => {
-//   if (searchInput) {
-//     fetchQuotes(CHARACTER_URL);
-//   }
-// });
